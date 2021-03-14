@@ -1,0 +1,148 @@
+body {
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+}
+
+.header {
+    position: fixed;
+    padding: 0.7%;
+    background-color: #02ea99;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    position: absolute;
+    padding: 0.5%;
+    width: 5%;
+    background-color: #00cc84;
+    border: 5px solid #02ea99;
+    border-radius: 20%;
+}
+
+.accmgr {
+    display: flex;
+    position: relative;
+    right: 1.2%;
+    padding: 0.1%;
+    float: right;
+    text-align: center;
+    width: 15%;
+}
+
+.logbuttn {
+    padding: 5%;
+    width: 50%;
+    background-color: #00cc84;
+    color: white;
+    border: 2px solid white;
+    border-radius: 0px 30px 30px 0px;
+    font-size: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logbuttn:hover {
+    background-color: #00bf7c;
+}
+
+.signbuttn {
+    padding: 5%;
+    width: 50%;
+    background-color: white;
+    color: #00cc84;
+    border: 2px solid #00cc84;
+    border-radius: 30px 0px 0px 30px;
+    font-size: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.signbuttn:hover {
+    background-color: whitesmoke;
+}
+
+.headbuttn {
+    position: relative;
+    right: 0.5%;
+    float: right;
+    background-color: #00cc84;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    height: 100%;
+    margin: 0% 0.5% 0% 0.5%;
+}
+
+.content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome {
+    width: 90%;
+    margin: auto;
+    border: 3px solid #02ea99;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 300%;
+    margin: 0px;
+    padding: 2% 0% 2% 0%;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.welcimg {
+    border-radius: 50% / 30%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 50%;
+    overflow: hidden;
+}
+
+.crop {
+    object-fit: cover;
+    object-position: 0px -150px;
+    max-width: 100%;
+    height: auto;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    margin: 5% 0% 5% 0%;
+}
+
+.card {
+    border: 3px solid #02ea99;
+    border-radius: 50px;
+    width: 27%;
+    margin: auto;
+    text-align: center;
+}
+
+.cardimg {
+    border-radius: 50% / 30%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 50%;
+    overflow: hidden;
+}
+
+.smcrop {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+.footer {
+    background-color: #02ea99;
+    height: 10%;
+    padding: 1%;
+    color: white;
+    text-align: center;
+}
