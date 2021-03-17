@@ -129,6 +129,10 @@ body {
     text-align: center;
 }
 
+.sctext {
+    text-align: center;
+}
+
 .cardimg {
     border-radius: 50% / 30%;
     border-bottom-left-radius: 50px;
@@ -149,4 +153,25 @@ body {
     padding: 1%;
     color: white;
     text-align: center;
+}
+
+input {
+    width: 100%;
+    height: 5%;
+    padding: 1%;
+    margin: 1%
+}
+
+.fulario {
+    width: 40%;
+    margin: auto;
+    padding: 2% 2% 7% 2%;
+}
+
+.submit {
+    margin-top: 2%;
+    background-color: #02ea99;
+    border: none;
+    border-radius: 50px;
+    color: white;
 }
