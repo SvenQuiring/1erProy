@@ -41,21 +41,28 @@
           </div>
           <div class="fulario">
               <p class="sctext">Calcule su edad</p>
-              <form>
+              <form method="post">
                   <lable for="nombre">Nombre:</lable>
-                  <input type="text" id="nombre">
+                  <input type="text" id="nombre" name="nombre">
                   <lable for="apellido">Apellido:</lable>
-                  <input type="text" id="apellido">
+                  <input type="text" id="apellido" name="apellido">
                   <lable for="fecha">Fecha de Nacimiento</lable>
-                  <input type="date" id="fecha">
-                  <input type="submit" class="submit">
+                  <input type="date" id="fecha" name="fecha">
+                  <input type="submit" class="submit" value="Enviar">
               </form>
 
-              Hola <?php
+              <?php
+              $date1 = new DateTime($_POST['fecha']);
+              $date2 = new DateTime(date("Y-m-d"));
 
-                   echo htmlspecialchars($_POST['nombre']);
+              $dateDiff = $date1->diff($date2);
 
-                   ?>
+              if (isset($_POST['nombre']) && isset($_POST['apellido'])) {
+                  echo "Hola " . htmlspecialchars($_POST['nombre']);
+                  echo " " . htmlspecialchars($_POST['apellido']);
+                  print ", tienes " . $dateDiff->format("%Y anos, %m meses y %d dias de edad");
+              }
+              ?>
 
           </div>
           <div class="footer">
