@@ -55,6 +55,7 @@
               $date1 = new DateTime($_POST['fecha']);
               $date2 = new DateTime(date("Y-m-d"));
 
+
               $dateDiff = $date1->diff($date2);
 
               if (isset($_POST['nombre']) && isset($_POST['apellido'])) {
@@ -64,6 +65,26 @@
               }
               ?>
 
+          </div>
+          <div class="calen">
+                  <?php
+                  echo "<p>" . date("Y") . "</p> <p>" . date("F") . "</p>";
+                  echo "<table> <tr>";
+                  for ($h=1;$h<=7;$h++) {
+                      echo "<th>" . date("D", strtotime($h . date('F-Y'))) . "</th>";
+                      if ($h == 7) {
+                          echo "</tr>";
+                      }
+                  }
+                  echo "<tr>";
+                  for ($i=1;$i<date('t');$i++) {
+                      echo "<td>" . $i . "</td>";
+                      if ($i%7 == 0) {
+                          echo "</tr>";
+                      }
+                  }
+              ?>
+              </table>
           </div>
           <div class="footer">
               Que haces aca abajo? Esta tan bueno?

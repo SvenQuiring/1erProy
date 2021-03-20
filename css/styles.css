@@ -165,7 +165,7 @@ input {
 .fulario {
     width: 40%;
     margin: auto;
-    padding: 2% 2% 7% 2%;
+    padding: 1% 1% 1% 1%;
 }
 
 .submit {
@@ -174,4 +174,24 @@ input {
     border: none;
     border-radius: 50px;
     color: white;
+}
+
+.calen {
+    width: 50%;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+    margin: auto;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+
+th {
+    width:15%;
+}
+
+td {
+    text-align: center;
 }
