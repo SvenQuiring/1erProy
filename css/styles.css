@@ -149,7 +149,6 @@ body {
 
 .footer {
     background-color: #02ea99;
-    height: 10%;
     padding: 1%;
     color: white;
     text-align: center;
@@ -170,6 +169,7 @@ input {
 
 .submit {
     margin-top: 2%;
+    width: 30%;
     background-color: #02ea99;
     border: none;
     border-radius: 50px;
@@ -194,4 +194,12 @@ th {
 
 td {
     text-align: center;
+}
+
+.bolud {
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 40%;
+    margin: auto;
+    word-wrap: break-word;
 }

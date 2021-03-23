@@ -68,16 +68,25 @@
           </div>
           <div class="calen">
                   <?php
-                  echo "<p>" . date("Y") . "</p> <p>" . date("F") . "</p>";
+
+                  if(!empty($_POST['mes'])) {
+                      $mes = date('F', mktime(0, 0, 0, $_POST['mes'], 10));
+                      $cantdias = cal_days_in_month(CAL_GREGORIAN, $_POST['mes'], date('Y'));
+                  } else {
+                      $mes = date('F');
+                      $cantdias = date('t');
+                  }
+
+                  echo "<p>" . date("Y") . "</p> <p>" . $mes . "</p>";
                   echo "<table> <tr>";
                   for ($h=1;$h<=7;$h++) {
-                      echo "<th>" . date("D", strtotime($h . date('F-Y'))) . "</th>";
+                      echo "<th>" . date("D", strtotime($h . $mes . date('-Y'))) . "</th>";
                       if ($h == 7) {
                           echo "</tr>";
                       }
                   }
                   echo "<tr>";
-                  for ($i=1;$i<date('t');$i++) {
+                  for ($i=1;$i<=$cantdias;$i++) {
                       echo "<td>" . $i . "</td>";
                       if ($i%7 == 0) {
                           echo "</tr>";
@@ -85,9 +94,31 @@
                   }
               ?>
               </table>
+              <div styles="display: flex;">
+                  <form method="post">
+                      <select name="mes" id="mes">
+                          <option value="1">Enero</option>
+                          <option value="2">Febrero</option>
+                          <option value="3">Marzo</option>
+                          <option value="4">Abril</option>
+                          <option value="5">Mayo</option>
+                          <option value="6">Junio</option>
+                          <option value="7">Julio</option>
+                          <option value="8">Agosto</option>
+                          <option value="9">Septiembre</option>
+                          <option value="10">Octubre</option>
+                          <option value="11">Noviembre</option>
+                          <option value="12">Diciembre</option>
+                      </select>
+                      <input type="submit" class="submit" value="Enviar">
+                  </form>
+              </div>
           </div>
           <div class="footer">
               Que haces aca abajo? Esta tan bueno?
+              <div class="bolud">
+                  EsteEsUnTextoUltraLargoConElUnicoPropositoDeUsarElWordWrapPorqueHonestamenteNoSeMeOcurreNada
+              </div>
           </div>
       </div>
   </body>
