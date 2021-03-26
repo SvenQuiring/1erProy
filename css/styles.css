@@ -148,6 +148,7 @@ body {
 }
 
 .footer {
+    margin-top: 1%;
     background-color: #02ea99;
     padding: 1%;
     color: white;
@@ -176,12 +177,38 @@ input {
     color: white;
 }
 
-.calen {
-    width: 50%;
-    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+.calcont {
+    display: flex;
     margin: auto;
-    padding: 2% 2% 2% 2%;
+    width: 40%;
+    align-items: center;
+}
+
+.calen {
+    width: 90%;
+    margin: auto;
+    padding: 0% 2% 2% 2%;
     text-align: center;
+    border: 3px solid #02ea99;
+    border-radius: 30px;
+}
+
+.arrowl {
+    height: 10%;
+    padding: 2% 3% 2% 3%;
+    background-color: #02ea99;
+    border: none;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.arrowr {
+    height: 10%;
+    padding: 2% 3% 2% 3%;
+    background-color: #02ea99;
+    border: none;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 table {
