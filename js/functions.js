@@ -1,6 +1,7 @@
 var date = new Date();
 var month = date.getMonth();
 var year = date.getFullYear();
+var reserv = [];
 
 function resMes() {
     if (month > 0) {
@@ -63,3 +64,27 @@ function calendar() {
 $( document ).ready(function() {
     $(".calen").load("../php/calendar.php");
 });
+
+function reserve(clicked_id) {
+    var repeated = false;
+
+    for(var i=0;i<reserv.length;i++)
+        {
+            if(clicked_id == reserv[i]) {
+                reserv.splice(i);
+                repeated = true;
+            }
+        }
+    if(repeated == false) {
+        reserv.push(clicked_id);
+    }
+
+    $.ajax({
+        url: "../php/reserve.php",
+        type: "post",
+        data: {reserv:reserv},
+        success: function (styles) {
+            $(".style").html(styles);
+        }
+    })
+}

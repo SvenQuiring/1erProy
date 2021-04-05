@@ -22,7 +22,7 @@ for ($h=1;$h<=7;$h++) {
 
     if (date("N", mktime(0,0,0,$month,1,$year)) == $h){
         for ($i=1;$i<=$cantdias;$i++) {
-            echo "<td>" . $i . "</td>";
+            echo "<td id='" . $mes . $i . $year . "' onclick='reserve(this.id)'>" . $i . "</td>";
 
             if ($h%7 == 0) {
                 echo "</tr> <tr>";
@@ -38,13 +38,5 @@ for ($h=1;$h<=7;$h++) {
         echo "</tr>";
     }
 }
-#echo "<tr>";
-#for ($i=1;$i<=$cantdias;$i++) {
-#    echo "<td>" . $i . "</td>";
-#    if ($i%7 == 0) {
-#        echo "</tr>";
-#    }
-#}
-#echo "</table>";
 
 ?>
